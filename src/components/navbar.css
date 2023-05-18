@@ -11,8 +11,168 @@ nav{
 
 }
 
+/* only show on medium  and small screen*/
+
+.nav__taggle-btn{
+    display: none;
+}
+
 .nav__container{
     height: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    width: 7rem;
+}
+
+.nav__links{
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.nav__links a{
+    transition: var(--transition);
+}
+
+.nav__links a:hover{
+    color: var(--color-secondary);
+}
+
+.active-nav{
+    position: relative;
+}
+
+.active-nav::after{
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--color-primary);
+    position: absolute;
+    left: calc(50% - 0.6rem);
+    transform:rotate(45deg);
+    margin-top: 0.9rem;
+}
+.nav__toggle-btn{
+    display:none;
+    background: var(--color-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.nav__toggle-btn svg{
+    color: var(--color-gray-100);
+}
+
+
+
+
+/* media Queries(small and maedium screens) */
+
+@media screen and (max-width: 1024px){
+    .nav__toggle-btn{
+        display: inline-block;
+        background: var(--color-primary);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
     
+    .nav__toggle-btn svg{
+        color: var(--color-gray-100);
+    }
+
+    .nav__links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        perspective: 350px;
+    }
+    .active-nav , .active-nav::after{
+        display: none;
+    }
+
+    .nav__links li{
+        height: 4rem;
+        width: 100%;
+        box-shadow:-2rem 2rem 5rem rgba(0,0,0,0.4);
+
+    }
+
+    .nav__links ul{
+        transform: rotateY(-90deg);
+        transform-origin: top right;
+        animation: animation1 1s ease  forwards;
+        opacity: 0;
+    }
+    
+/* aimations */
+
+
+
+    .nav__links li{
+        transform: rotate(-90deg) rotateY(90deg);
+        transform-origin: top right;
+        animation: animation1 1s ease forwards;
+        opacity: 0;
+    }
+
+    .nav__links li:nth-child(2){
+        animation-delay: 300ms;
+        transform-origin: top left;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+    .nav__links li:nth-child(3){
+        animation-delay: 300ms;
+        transform-origin: top right;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+    .nav__links li:nth-child(4){
+        animation-delay: 300ms;
+        transform-origin: top left;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+    .nav__links li:nth-child(5){
+        animation-delay: 300ms;
+        transform-origin: top right;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+    .nav__links li:nth-child(6){
+        animation-delay: 300ms;
+        transform-origin: top left;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+
+
+    @keyframes animation1 {
+        to{
+            transform:rotate(0);
+            opacity: 1;
+        }
+    }
+
+    /* animations codes ends here */
+
+    .nav__links li a{
+        background-color: var(--color-primary);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1rem 5rem 1rem 3rem;
+    }
+
+    show__nav{
+        display: flex;
+    }
+
+    .hide__nav{
+        display: none;
+    }
 }
