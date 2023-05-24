@@ -7,8 +7,8 @@ import FAQ from './FAQ'
 
 const FAQs = () => {
   return (
-    <section>
-        <div className="continer faqs__container">
+    <section className='faqs'>
+        <div className="container faqs__container">
             <SectionHead icon={<FaQuestion/>} title='FAQs'/>
             <div className='faqs__wrapper'>
                 {
