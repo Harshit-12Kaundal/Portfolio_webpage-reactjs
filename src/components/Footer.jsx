@@ -2,14 +2,14 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Logo from '../images/logo.png'
 import { FaLinkedin } from 'react-icons/fa'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebookF } from 'react-icons/fa'
 import { AiOutlineTwitter } from 'react-icons/ai'
 import { AiFillInstagram } from 'react-icons/ai'
 
 const Footer = () => {
   return (
     <footer>
-        <div className="container" footer__container>
+        <div className="container footer__container">
             <article>
                 <Link tp='/' className='logo'>
                     <img src={Logo} alt='Footer Logo'/>
@@ -19,7 +19,7 @@ const Footer = () => {
                 </p>
                 <div className="footer__socials">
                     <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" ><FaLinkedin/></a>
-                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" ><FaFacebook/></a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" ><FaFacebookF/></a>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" ><AiOutlineTwitter/></a>
                     <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" ><AiFillInstagram/></a>
                 </div>
