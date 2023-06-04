@@ -320,8 +320,8 @@ footer{
     .main__header{
         height: fit-content;
         padding: 12rem 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: 90%;
+        margin-left: 2remcv;
 
     }
     .main__header-container{
@@ -455,7 +455,7 @@ footer{
 
     .footer__container article p{
         text-align: center;
-        
+
     }
 }
 
