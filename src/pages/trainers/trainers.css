@@ -1,0 +1,25 @@
+.trainer__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+
+.trainer__img{
+    border-radius: 0 2rem;
+    overflow: hidden;
+}
+.trainer h3{
+    margin-top: 2rem;
+}
+
+.trainer p{
+    margin-top: 0.5rem;
+}
+
+.trainer__socials{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}

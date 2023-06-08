@@ -23,9 +23,10 @@ const Plans = () => {
                 <h4>Features</h4>
                 {
                   features.map(({feature,available},index) =>{
-                    return <p key></p>
+                    return <p key={index} className={!available?'disabled':''}>{feature}</p>
                   })
                 }
+                <button className='btn lg'>Choose plan</button>
               </Card>
             })
           }
