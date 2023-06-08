@@ -13,7 +13,7 @@ const Trainer = ({image,name,job,socials}) => {
         <div className="trainer__socials">
           {
             socials.map(({icon,link},index)=> {
-                return <a key={index} href={link} target='blank' rel='noopener noreffer'></a>
+                return <a key={index} href={link} target='blank' rel='noopener noreffer'>{icon}</a>
             })
           }
         </div>
