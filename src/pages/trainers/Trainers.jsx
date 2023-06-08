@@ -16,17 +16,17 @@ const Trainers = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore soluta nihil quaerat quam molestias quas!
       </Header>
 
-      <section className='trainer'>
-        <div className='container trainer__container'>
+      <section className='trainers'>
+        <div className='container trainers__container'>
           {
             trainers.map(({id,image,name,job, socials})=>{
               return <Trainer key={id} image={image} name={name} job={job} socials={  
-              [
-                {icon:<BsInstagram/>, link: socials[0]},
-                {icon:<AiOutlineTwitter/>, link: socials[1]},
-                {icon:<FaFacebookF/>, link: socials[2]},
-                {icon:<FaLinkedinIn/>, link: socials[3]}
-              ]
+                [
+                  {icon:<BsInstagram/>, link: socials[0]},
+                  {icon:<AiOutlineTwitter/>, link: socials[1]},
+                  {icon:<FaFacebookF/>, link: socials[2]},
+                  {icon:<FaLinkedinIn/>, link: socials[3]}
+                ]
               }/>
             })
           }
